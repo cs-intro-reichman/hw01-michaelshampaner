@@ -5,6 +5,14 @@
  */ 
 public class Triangle {
 	public static void main(String[] args) {
-		// Put your code here	
+		int firstNumber = Integer.parseInt(args[0]);
+		int secondNumber = Integer.parseInt(args[1]);
+		int thirdNumber = Integer.parseInt(args[2]);
+		int sum1 = firstNumber + secondNumber;
+		int sum2 = firstNumber + thirdNumber;
+		int sum3 = secondNumber + thirdNumber;
+		// check if the lengths forms a triangle
+		boolean isTriangle = (sum1 > thirdNumber) && (sum2 > secondNumber) && (sum3 > firstNumber);
+		System.out.println(firstNumber + ", " + secondNumber + ", " + thirdNumber + ": " + isTriangle);	
 	}
 }
